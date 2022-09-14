@@ -62,9 +62,9 @@ test:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: ZoolaGallery_test
+# test:
+#   <<: *default
+#   database: ZoolaGallery_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -86,8 +86,8 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: ZoolaGallery_production
-  username: ZoolaGallery
-  password: <%= ENV['ZOOLAGALLERY_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: ZoolaGallery_production
+#   username: ZoolaGallery
+#   password: <%= ENV['ZOOLAGALLERY_DATABASE_PASSWORD'] %>
