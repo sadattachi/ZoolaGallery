@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'net-smtp', require: false
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
 group :development, :test do
