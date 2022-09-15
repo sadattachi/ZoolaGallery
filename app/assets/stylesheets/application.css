@@ -31,3 +31,33 @@ img.rounded-circle {
     max-height: 250px;
     margin-bottom: 1rem;
 }
+
+.b-image {
+    background: rgb(198, 198, 198);
+    background: linear-gradient(90deg, rgba(198, 198, 198, 1) 0%, rgba(244, 244, 244, 1) 100%);
+}
+
+.main-color {
+    background-image: url('background.jpg');
+}
+
+.card-1 {
+    background-image: url('test.jpg');
+    background-size: 300px 100px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    max-width: 1080px;
+}
+
+.card-img {
+    width: 286px;
+    height: 335px;
+}
