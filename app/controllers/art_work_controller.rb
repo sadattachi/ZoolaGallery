@@ -1,5 +1,10 @@
 class ArtWorkController < ApplicationController
   before_action :authenticate_user!, only: %i[new]
+
+  def index
+    @art_works = ArtWork.where(user_id: params[:id].to_i)
+  end
+
   def new
     @art_work = current_user.art_works.build
   end
