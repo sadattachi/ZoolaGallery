@@ -1,0 +1,16 @@
+<div class="row">
+  <%@art_works.each do |art_work|%>
+    <div class="card thumb-post mt-5" style="width: 300px; padding: 0px;">
+      <img src=<%=art_work.attachment.url%> alt="image" class="card-img-top" style="object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title"><%= art_work.title %></h5>
+        <%if user_signed_in?%>
+          <% if current_user.id == art_work.user_id%>
+            <%= link_to 'Edit', root_path, class:"btn btn-secondary btn-block", style: "width: auto; display: block;"%>
+            <%= link_to 'Delete', root_path, class:"btn btn-secondary btn-block mt-1", style: "width: auto; display: block;"%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  <% end %>
+</div>
