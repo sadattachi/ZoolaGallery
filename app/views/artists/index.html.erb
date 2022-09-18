@@ -1,10 +1,13 @@
-<%@artists.each do |artist|%>
-  <div class="card thumb-post mt-5" style="width: 300px; padding: 0px;">
-    <img src=<%=artist.avatar.url%> alt="image" class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title"><%= artist.nickname %></h5>
-      <p class="card-text"><%= artist.description%></p>
-      <a href="#" class="btn btn-primary">Works</a>
+<div class="row">
+  <%@artists.each do |artist|%>
+    <div class="card thumb-post mt-5" style="width: 300px; padding: 0px;">
+      <%= link_to artist_art_works_path(artist) do %>
+        <img src=<%=artist.avatar.url%> alt="image" class="card-img-top" style="object-fit: cover;">
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title"><%= artist.nickname %></h5>
+        <p class="card-text"><%= artist.description%></p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
