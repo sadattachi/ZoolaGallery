@@ -1,5 +1,5 @@
 class ArtWorksController < ApplicationController
-  before_action :authenticate_user!, only: %i[new]
+  before_action :authenticate_user!, only: %i[new update edit destroy]
   before_action :set_art_work, only: %i[update edit destroy check_user]
   before_action :check_user, only: %i[update edit destroy]
 
