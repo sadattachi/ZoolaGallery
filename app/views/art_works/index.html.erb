@@ -6,8 +6,8 @@
         <h5 class="card-title"><%= art_work.title %></h5>
         <%if user_signed_in?%>
           <% if current_user.id == art_work.user_id%>
-            <%= link_to 'Edit', root_path, class:"btn btn-secondary btn-block", style: "width: auto; display: block;"%>
-            <%= link_to 'Delete', delete_art_works_path(art_work), method: :delete, class:"btn btn-secondary btn-block mt-1", style: "width: auto; display: block;"%>
+            <%= link_to 'Edit', edit_art_work_path(art_work), class:"btn btn-secondary btn-block", style: "width: auto; display: block;"%>
+            <%= link_to 'Delete', art_work_path(art_work), method: :delete, class:"btn btn-secondary btn-block mt-1", style: "width: auto; display: block;"%>
           <%end%>
         <%end%>
       </div>
