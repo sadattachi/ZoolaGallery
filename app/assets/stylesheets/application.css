@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "devise.css";
 
 img.rounded-circle {
     object-fit: cover;
