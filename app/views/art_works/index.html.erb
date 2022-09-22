@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row ps-5 pe-5 pt-4">
   <%@art_works.each do |art_work|%>
-    <div class="card thumb-post mt-5" style="width: 300px; padding: 0px;">
-      <img src=<%=art_work.attachment.url%> alt="image" class="card-img-top" style="object-fit: cover;">
+    <div class="card thumb-post ms-2" style="width: 300px; padding: 0px;">
+      <img src=<%=art_work.attachment.url%> alt="image" class="card-img-top modal-hover-opacity" style="object-fit: cover;" onclick="openModal(this)">
       <div class="card-body">
         <h5 class="card-title"><%= art_work.title %></h5>
         <%if user_signed_in?%>
@@ -14,3 +14,11 @@
     </div>
   <% end %>
 </div>
+<%= render 'modal' %>
+<script>
+  function openModal(element) {
+    console.log("test")
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+  }
+</script>
