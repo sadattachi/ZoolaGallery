@@ -16,13 +16,13 @@
     <%end%>
     <div class="container">
       <%if notice%>
-        <div class="alert alert-primary alert-dismissible fade show w-50 mt-2" role="alert">
+        <div class="alert alert-primary alert-dismissible fade show mt-2 ms-5 me-5" role="alert" style="z-index: 2; position:absolute;">
           <%= notice %>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       <%end%>
       <%if alert%>
-        <div class="alert alert-danger alert-dismissible fade show w-50  mt-2" role="alert">
+        <div class="alert alert-danger alert-dismissible fade show mt-2 ms-5 me-5" role="alert" style="z-index: 2; position:absolute;">
           <%= alert %>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
