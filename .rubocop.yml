@@ -8,4 +8,3 @@ AllCops:
     - ruby_executable_hooks
     - bin/*
   NewCops: disable  
-  
