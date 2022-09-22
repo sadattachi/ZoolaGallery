@@ -11,7 +11,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body class="main-color">
-    <%= render 'page/header' %>
+    <%if controller_name != 'registrations' && controller_name != 'sessions'%>
+      <%= render 'page/header' %>
+    <%end%>
     <div class="container">
       <%if notice%>
         <div class="alert alert-primary alert-dismissible fade show w-50 mt-2" role="alert">
