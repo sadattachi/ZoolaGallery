@@ -1,5 +1,4 @@
 .leftHalf-upload {
-    background: url(bg-1.jpg);
     width: 50%;
     position: absolute;
     left: 0px;
@@ -7,7 +6,6 @@
 }
 
 .rightHalf-upload {
-
     width: 50%;
     position: absolute;
     right: 0px;
