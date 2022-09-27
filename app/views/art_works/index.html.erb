@@ -1,0 +1,24 @@
+<div class="row ps-5 pe-5 pt-4">
+  <%@art_works.each do |art_work|%>
+    <div class="card thumb-post ms-2" style="width: 300px; padding: 0px;">
+      <img src=<%=art_work.attachment.url%> alt="image" class="card-img-top modal-hover-opacity" style="object-fit: cover;" onclick="openModal(this)">
+      <div class="card-body">
+        <h5 class="card-title"><%= art_work.title %></h5>
+        <%if user_signed_in?%>
+          <% if current_user.id == art_work.user_id%>
+            <%= link_to 'Edit', edit_art_work_path(art_work), class:"btn btn-secondary btn-block", style: "width: auto; display: block;"%>
+            <%= link_to 'Delete', art_work_path(art_work), method: :delete, class:"btn btn-secondary btn-block mt-1", style: "width: auto; display: block;"%>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= render 'modal' %>
+<script>
+  function openModal(element) {
+    console.log("test")
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+  }
+</script>

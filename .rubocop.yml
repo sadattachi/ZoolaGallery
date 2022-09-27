@@ -1,0 +1,10 @@
+require: 
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - ruby_executable_hooks
+    - bin/*
+  NewCops: disable  

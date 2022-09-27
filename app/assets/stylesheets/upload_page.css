@@ -1,0 +1,20 @@
+.leftHalf-upload {
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 94%;
+}
+
+.rightHalf-upload {
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 94%;
+}
+
+.upload-form {
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

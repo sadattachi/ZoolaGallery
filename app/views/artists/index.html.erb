@@ -1,0 +1,13 @@
+<div class="row ps-5 pe-5 pt-4">
+  <%@artists.each do |artist|%>
+    <div class="card thumb-post ms-2" style="width: 300px; padding: 0px;">
+      <%= link_to artist_art_works_path(artist) do %>
+        <img src=<%=artist.avatar.url%> alt="image" class="card-img-top modal-hover-opacity" style="object-fit: cover;">
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title"><%= artist.nickname %></h5>
+        <p class="card-text"><%= artist.description%></p>
+      </div>
+    </div>
+  <% end %>
+</div>
